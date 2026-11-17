@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeadlineHero — Assignment Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header & Gamification Stats -->
+    <header>
+      <div class="brand">
+        <h1>⚡ DeadlineHero</h1>
+        <p>Crush your homework before it crushes you.</p>
+      </div>
+      <div class="stats-bar">
+        <div class="stat-badge">
+          <span class="stat-label">XP</span>
+          <span id="xp-display" class="stat-value">0</span>
+        </div>
+        <div class="stat-badge">
+          <span class="stat-label">Streak</span>
+          <span id="streak-display" class="stat-value">0 🔥</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Frictionless Quick-Add Form -->
+    <form id="task-form" class="task-form">
+      <input type="text" id="task-title" placeholder="Assignment title (e.g., Essay Ch. 4)" required>
+      <input type="text" id="task-subject" placeholder="Subject (e.g., History)" required>
+      <input type="date" id="task-deadline" required>
+      <button type="submit">+ Add Task</button>
+    </form>
+
+    <!-- Task Display Grid -->
+    <main>
+      <div id="task-list" class="task-grid"></div>
+      <p id="empty-state" class="empty-state">No active assignments! Enjoy your free time 🎉</p>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
